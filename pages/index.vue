@@ -130,7 +130,7 @@
         <v-col cols="12" md="6">
           <v-select
             :items="items"
-            v-model="form.breed"
+            v-model="form.age"
             append-icon="mdi-chevron-down"
             :rules="[v => !!v || 'Please select an item']"
             placeholder="Select Age"
@@ -140,7 +140,9 @@
         </v-col>
 
         <!--  -->
-        <v-btn color="secondary" class="mx-auto mt-10" large>Get your quote</v-btn>
+        <v-btn color="secondary" class="mx-auto mt-10" large
+          >Get your quote</v-btn
+        >
       </v-row>
     </v-form>
   </div>
@@ -160,7 +162,8 @@ export default {
         petName: "",
         type: "",
         gender: "",
-        breed: ""
+        breed: "",
+        age: ""
       },
       isFormValid: false,
       regexValidEmail: new RegExp(

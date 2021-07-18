@@ -4,6 +4,7 @@
 }
 .v-application {
   // background-color: var(--v-accent-base) !important;
+  overflow-x: hidden !important;
 }
 .v-tooltip__content {
   word-break: break-all;

@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <img src="~/assets/img/water-drop-design.svg" class="floating-water-drop" />
+    <img src="~/assets/img/water-drop-design.svg" class="floating-water-drop d-none d-md-block" />
     <v-row class="fill-height" no-gutters>
       <v-col cols="12" md="4" lg="3">
         <v-card flat tile class="lightGrey fill-height overflow-hidden">

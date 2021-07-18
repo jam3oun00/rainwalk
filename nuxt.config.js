@@ -1,4 +1,6 @@
 export default {
+  ssr: false,
+  target: "static",
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: "%s - rainwalk",
@@ -69,7 +71,7 @@ export default {
           success: "#FFF"
         }
       }
-    },
+    }
     // defaultAssets: false
   },
 
