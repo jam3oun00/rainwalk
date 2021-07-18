@@ -3,7 +3,7 @@
     flat
     tile
     class="lightGrey fill-height overflow-hidden"
-    :style="$vuetify.breakpoint.mdAndUp ? false : 'height: 30rem'"
+    :style="$vuetify.breakpoint.mdAndUp ? false : 'height: 12rem'"
   >
     <template v-if="$vuetify.breakpoint.mdAndUp">
       <v-row class="py-0 saide-wall-logo text-center" no-gutters>
@@ -47,7 +47,7 @@
       </v-row>
       <img
         src="~/assets/img/saide-wall-design-mobile.svg"
-        class="saide-wall-design"
+        class="saide-wall-design-mobile"
       />
     </template>
   </v-card>

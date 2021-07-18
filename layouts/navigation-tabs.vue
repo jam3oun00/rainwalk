@@ -46,6 +46,16 @@ export default {};
   left: 0;
   right: 0;
   width: 100%;
+
+  &-mobile {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    bottom: 0;
+    z-index: 0;
+  }
 }
 .saide-wall-logo {
   width: 100%;
