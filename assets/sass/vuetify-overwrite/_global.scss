@@ -1,0 +1,18 @@
+//
+.v-ripple__container {
+  display: none !important;
+}
+.v-application {
+  background-color: var(--v-accent-base) !important;
+}
+.v-tooltip__content {
+  word-break: break-all;
+  // opacity: 1 !important;
+  @extend .shadow-3;
+}
+
+// .v-btn {
+//   &::before {
+//     display: none !important;
+//   }
+// }
