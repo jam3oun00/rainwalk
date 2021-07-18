@@ -16,3 +16,20 @@
 //     display: none !important;
 //   }
 // }
+.v-input--selection-controls__ripple {
+  display: none !important;
+}
+
+.v-input--radio-group {
+  margin: 0 !important;
+
+  .v-radio {
+    margin: 0 !important;
+    direction: rtl;
+
+    .v-label {
+      margin-right: 19px;
+      color: black;
+    }
+  }
+}

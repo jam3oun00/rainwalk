@@ -2,7 +2,7 @@
   <div>
     <h2 class="text-center primary--text mb-10">Your information</h2>
     <v-form class="main-widget" v-model="isFormValid">
-      <v-row>
+      <v-row no-gutters>
         <!--  -->
         <v-col cols="12" md="6">
           <h3>Your Name:</h3>
@@ -57,6 +57,54 @@
           />
         </v-col>
       </v-row>
+
+      <!--  -->
+      <h2 class="text-center primary--text mb-8 mt-5">Your pet’s information</h2>
+      <!--  -->
+
+      <!--  -->
+      <v-row no-gutters>
+        <!--  -->
+        <v-col cols="12" md="6">
+          <h3>Pet’s Name:</h3>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-text-field
+            v-model="form.petName"
+            :rules="[v => !!v || 'Pet’s Name is required']"
+            outlined
+            dense
+          />
+        </v-col>
+
+        <!--  -->
+        <v-col cols="12" md="6">
+          <h3>Do you have a:</h3>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-radio-group v-model="form.type" class="mb-3">
+            <div class="d-flex justify-end align-center mr-n2">
+              <v-radio color="lightGrey darken-4" label="Dog" />
+              <span class="mx-3"></span>
+              <v-radio color="lightGrey darken-4" label="Cat" />
+            </div>
+          </v-radio-group>
+        </v-col>
+
+        <!--  -->
+        <v-col cols="12" md="6">
+          <h3>Is your pet:</h3>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-radio-group v-model="form.gender" class="mb-3">
+            <div class="d-flex justify-end align-center mr-n2">
+              <v-radio color="lightGrey darken-4" label="Dog" />
+              <span class="mx-3"></span>
+              <v-radio color="lightGrey darken-4" label="Cat" />
+            </div>
+          </v-radio-group>
+        </v-col>
+      </v-row>
     </v-form>
   </div>
 </template>
@@ -70,7 +118,10 @@ export default {
         name: "",
         address: "",
         email: "",
-        phoneNumber: ""
+        phoneNumber: "",
+        petName: "",
+        type: "",
+        gender: ""
       },
       isFormValid: false,
       regexValidEmail: new RegExp(
@@ -86,4 +137,4 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>
