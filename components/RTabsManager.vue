@@ -6,7 +6,7 @@
     :style="$vuetify.breakpoint.mdAndUp ? false : 'height: 12rem'"
   >
     <template v-if="$vuetify.breakpoint.mdAndUp">
-      <v-row class="py-0 saide-wall-logo text-center" no-gutters>
+      <v-row class="py-0 side-wall-logo text-center" no-gutters>
         <v-col class="d-flex justify-center">
           <img src="~/assets/img/logo.svg" />
         </v-col>
@@ -28,10 +28,10 @@
           <v-btn icon x-large>3</v-btn>
         </v-col>
       </v-row>
-      <img src="~/assets/img/saide-wall-design.svg" class="saide-wall-design" />
+      <img src="~/assets/img/side-wall-design.svg" class="side-wall-design" />
     </template>
     <template v-else>
-      <v-row class="py-0 saide-wall-logo text-center pl-6" no-gutters>
+      <v-row class="py-0 side-wall-logo text-center pl-6" no-gutters>
         <v-col cols="12" class="d-flex justify-start">
           <img src="~/assets/img/logo.svg" />
         </v-col>
@@ -46,8 +46,8 @@
         </div>
       </v-row>
       <img
-        src="~/assets/img/saide-wall-design-mobile.svg"
-        class="saide-wall-design-mobile"
+        src="~/assets/img/side-wall-design-mobile.svg"
+        class="side-wall-design-mobile"
       />
     </template>
   </v-card>

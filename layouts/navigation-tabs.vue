@@ -39,7 +39,7 @@ export default {};
   height: 817px;
   z-index: 0;
 }
-.saide-wall-design {
+.side-wall-design {
   width: 100%;
   position: absolute;
   bottom: -30px;
@@ -57,9 +57,10 @@ export default {};
     z-index: 0;
   }
 }
-.saide-wall-logo {
+.side-wall-logo {
   width: 100%;
   position: absolute;
+  z-index: 3;
   top: 47px;
   a,
   button {
