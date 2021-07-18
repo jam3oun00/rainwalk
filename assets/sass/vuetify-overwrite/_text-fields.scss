@@ -35,3 +35,11 @@
 // .v-text-field--filled {
 //   border-radius: 5px !important;
 // }
+.v-text-field--outlined fieldset {
+  border-width: 2px !important;
+  color: #d0d0d0 !important;
+}
+.v-text-field--outlined,
+.v-text-field--solo {
+  border-radius: 5px !important;
+}

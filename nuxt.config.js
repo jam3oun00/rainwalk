@@ -75,7 +75,7 @@ export default {
 
   webfontloader: {
     google: {
-      families: ["Open+Sans:200,400,700,800,900"]
+      families: ["Cabin:200,400,700,800,900"]
     }
   },
 

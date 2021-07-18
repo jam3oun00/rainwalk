@@ -1,9 +1,18 @@
-.overflow-h{
-    overflow: hidden !important;
+.overflow-h {
+  overflow: hidden !important;
 }
-.no-overflow{
-    overflow: visible !important;
+.no-overflow {
+  overflow: visible !important;
 }
-.pointer{
-    cursor: pointer !important;
+.pointer {
+  cursor: pointer !important;
+}
+.main-widget {
+  margin: auto;
+  @media #{map-get($display-breakpoints, 'md-and-up')} {
+    max-width: 80%;
+  }
+  @media #{map-get($display-breakpoints, 'lg-and-up')} {
+    max-width: 70%;
+  }
 }
