@@ -1,42 +1,12 @@
 <template>
   <v-app>
-    <img src="~/assets/img/water-drop-design.svg" class="floating-water-drop d-none d-md-block" />
+    <img
+      src="~/assets/img/water-drop-design.svg"
+      class="floating-water-drop d-none d-md-block"
+    />
     <v-row class="fill-height" no-gutters>
       <v-col cols="12" md="4" lg="3">
-        <v-card flat tile class="lightGrey fill-height overflow-hidden">
-          <v-row class="py-0 saide-wall-logo text-center" no-gutters>
-            <v-col class="d-flex justify-center">
-              <img src="~/assets/img/logo.svg" />
-            </v-col>
-            <v-col cols="12" class="mt-12">
-              <v-btn
-                icon
-                x-large
-                nuxt
-                to="/"
-                active-class="primary white--text"
-              >
-                1
-              </v-btn>
-            </v-col>
-            <v-col cols="12" class="my-3">
-              <v-divider vertical />
-            </v-col>
-            <v-col cols="12">
-              <v-btn icon x-large>2</v-btn>
-            </v-col>
-            <v-col cols="12" class="my-3">
-              <v-divider vertical />
-            </v-col>
-            <v-col cols="12">
-              <v-btn icon x-large>3</v-btn>
-            </v-col>
-          </v-row>
-          <img
-            src="~/assets/img/saide-wall-design.svg"
-            class="saide-wall-design"
-          />
-        </v-card>
+        <r-tabs-manager class="r-tabs-manager" />
       </v-col>
       <v-col cols="12" md="8" lg="9">
         <v-card
@@ -93,9 +63,18 @@ export default {};
     border: none;
     background-color: white;
     opacity: 1;
-    max-width: 3px;
-    width: 3px;
-    height: 43px;
+    &:not(.v-divider--vertical) {
+      width: 43px;
+      height: 3px;
+      max-height: 3px;
+      // margin: auto;
+    }
+
+    &.v-divider--vertical {
+      max-width: 3px;
+      width: 3px;
+      height: 43px;
+    }
   }
 }
 </style>
