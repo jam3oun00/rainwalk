@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <img src="~/assets/img/water-drop-design.svg" class="floating-water-drop" />
     <v-row class="fill-height" no-gutters>
       <v-col cols="12" md="4" lg="3">
         <v-card flat tile class="lightGrey fill-height overflow-hidden">
@@ -42,10 +43,10 @@
           flat
           tile
           style="min-height: 100%"
-          class="d-flex align-center justify-center"
+          class="d-flex align-center justify-center transparent"
         >
           <v-container>
-            <v-main>
+            <v-main class="py-10">
               <Nuxt />
             </v-main>
           </v-container>
@@ -60,6 +61,14 @@ export default {};
 </script>
 
 <style lang="scss">
+.floating-water-drop {
+  position: absolute;
+  top: -11rem;
+  right: -5rem;
+  opacity: 0.25;
+  height: 817px;
+  z-index: 0;
+}
 .saide-wall-design {
   width: 100%;
   position: absolute;

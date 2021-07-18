@@ -59,7 +59,9 @@
       </v-row>
 
       <!--  -->
-      <h2 class="text-center primary--text mb-8 mt-5">Your pet’s information</h2>
+      <h2 class="text-center primary--text mb-8 mt-5">
+        Your pet’s information
+      </h2>
       <!--  -->
 
       <!--  -->
@@ -98,12 +100,47 @@
         <v-col cols="12" md="6">
           <v-radio-group v-model="form.gender" class="mb-3">
             <div class="d-flex justify-end align-center mr-n2">
-              <v-radio color="lightGrey darken-4" label="Dog" />
+              <v-radio color="lightGrey darken-4" label="Male" />
               <span class="mx-3"></span>
-              <v-radio color="lightGrey darken-4" label="Cat" />
+              <v-radio color="lightGrey darken-4" label="Female" />
             </div>
           </v-radio-group>
         </v-col>
+
+        <!--  -->
+        <v-col cols="12" md="6">
+          <h3>Your pet’s breed?:</h3>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-select
+            :items="items"
+            v-model="form.breed"
+            append-icon="mdi-chevron-down"
+            :rules="[v => !!v || 'Please select an item']"
+            placeholder="Select Breed"
+            dense
+            outlined
+          ></v-select>
+        </v-col>
+
+        <!--  -->
+        <v-col cols="12" md="6">
+          <h3>Your pet’s age?:</h3>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-select
+            :items="items"
+            v-model="form.breed"
+            append-icon="mdi-chevron-down"
+            :rules="[v => !!v || 'Please select an item']"
+            placeholder="Select Age"
+            dense
+            outlined
+          ></v-select>
+        </v-col>
+
+        <!--  -->
+        <v-btn color="secondary" class="mx-auto mt-10" large>Get your quote</v-btn>
       </v-row>
     </v-form>
   </div>
@@ -114,6 +151,7 @@ export default {
   layout: "navigation-tabs",
   data() {
     return {
+      items: ["Foo", "Bar", "Fizz", "Buzz"],
       form: {
         name: "",
         address: "",
@@ -121,7 +159,8 @@ export default {
         phoneNumber: "",
         petName: "",
         type: "",
-        gender: ""
+        gender: "",
+        breed: ""
       },
       isFormValid: false,
       regexValidEmail: new RegExp(
