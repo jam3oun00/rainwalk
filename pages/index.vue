@@ -140,9 +140,23 @@
         </v-col>
 
         <!--  -->
-        <v-btn color="secondary" class="mx-auto mt-10" large
-          >Get your quote</v-btn
-        >
+        <v-col cols="12" md="6">
+          <h3>Is your pet neutered/spayed?:</h3>
+        </v-col>
+        <v-col cols="12" md="6">
+          <v-radio-group v-model="form.neuteredOrSpayed" class="mb-3">
+            <div class="d-flex justify-end align-center mr-n2">
+              <v-radio color="lightGrey darken-4" label="Yes" />
+              <span class="mx-3"></span>
+              <v-radio color="lightGrey darken-4" label="No" />
+            </div>
+          </v-radio-group>
+        </v-col>
+
+        <!--  -->
+        <v-btn color="secondary" class="mx-auto mt-10" large>
+          Get your quote
+        </v-btn>
       </v-row>
     </v-form>
   </div>
@@ -163,7 +177,8 @@ export default {
         type: "",
         gender: "",
         breed: "",
-        age: ""
+        age: "",
+        neuteredOrSpayed: ""
       },
       isFormValid: false,
       regexValidEmail: new RegExp(
